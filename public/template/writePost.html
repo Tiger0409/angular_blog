@@ -1,0 +1,10 @@
+<div class="container writepostView">
+	<div class="writepostviewchildView">
+		<input type="text" name="title" class="inputTitle" placeholder="标题" ng-model="postTitle" ng-focus = "clear()">
+		<div text-angular ng-model="htmlVariable" ng-focus="clear()"></div>
+	</div>
+	<div class="wirtepostviewsecondchild">
+		<div ng-class="{'errorAlert': true, 'AlertPosit-wirte':true, 'show': AlertInfo !== ''}"><div class="arrow"></div>{{AlertInfo}}</div>
+		<button type="button" class="btn btn-success buttonPost col-sm-offset-11" ng-click="addPost()">Post</button>
+	</div>
+</div>

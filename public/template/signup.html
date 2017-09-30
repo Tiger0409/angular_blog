@@ -1,0 +1,37 @@
+<div>
+	<div class='fadeView'></div>
+	<form action="/users/signin" method="post" class="center-block signupView">
+		<span class="glyphicon glyphicon-remove myclose" ng-click="close()"></span>
+		<div class="sign">
+			<div class="text-center text-info">
+				<h2>Regist</h2>
+			</div>
+			<div class="signinButton center-block">
+				<input type="text" class="form-control" name="username" placeholder="username" ng-model="user.username" ng-blur="checkInput($event)" ng-focus="formatInfo($event)" data-content="{{error.username}}"/>
+				<div ng-class="{'errorAlert':true, 'AlertPosit-sign':true, 'show':show.username !== ''}"><div class="arrow"></div>{{error.username}}</div>
+			</div>  
+			<div class="signinButton center-block">
+				<input type="password" class="form-control" name="password" placeholder="password" ng-model="user.password"  ng-blur='checkInput($event)' ng-focus="formatInfo($event)"/>
+				<div ng-class="{'errorAlert':true, 'AlertPosit-sign':true, 'show':show.password !== ''}"><div class="arrow"></div>{{error.password}}</div>
+			</div>
+			<div class="signinButton center-block">
+				<input type="password" class="form-control" name="repassword" placeholder="repassword" ng-model="user.repassword" ng-blur="checkInput($event)" ng-focus="formatInfo($event)"/>
+				<div ng-class="{'errorAlert':true, 'AlertPosit-sign':true, 'show':show.repassword !== ''}"><div class="arrow"></div>{{error.repassword}}</div>
+			</div>  
+			<div class="signinButton center-block">
+				<input type="text" class="form-control" name="nikiname" placeholder="nikiname" ng-model="user.nikiname"  ng-blur='checkInput($event)' ng-focus="formatInfo($event)"/>
+				<div ng-class="{'errorAlert':true, 'AlertPosit-sign':true, 'show':show.nikiname !== ''}"><div class="arrow"></div>{{error.nikiname}}</div>
+			</div>
+			<div class="signinButton center-block">
+				<input type="text" class="form-control" name="email" placeholder="email" ng-model="user.email" ng-blur="checkInput($event)" ng-focus="formatInfo($event)"/>
+				<div ng-class="{'errorAlert':true, 'AlertPosit-sign':true, 'show':show.email !== ''}"><div class="arrow"></div>{{error.email}}</div>
+			</div>  
+			<div class="signinButton center-block">
+				<button type="button" class="btn btn-success signinBButton" ng-click="postFrom()">Submit</button>
+			</div>
+			<div class="signinButton center-block">
+				<button type="button" class="btn btn-success signinBButton" ng-click="clear()">Reset</button>
+			</div>
+		</div>
+	</form>
+</div>

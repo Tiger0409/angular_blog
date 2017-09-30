@@ -1,0 +1,8 @@
+<ul class="list-unstyled list-inline paging">
+	<li ng-if="pageNums !== 0"><button type="button" ng-click="getItemsByPrePage()" class="btn btn-default">上一页</button></li>
+	<li ng-repeat="num in nums">
+		<span ng-if="num === 99999 || num === 99998">...</span>
+		<button type="button" ng-if="num !== 99999 && num !== 99998" ng-click="getClickPageItems(num)" ng-class="{'btn': true, 'btn-default': true, 'btn-active': currentPage === num}">{{num}}</button>
+	</li>
+	<li ng-if="pageNums !== 0"><button type="button" ng-click="getItemsByNextPage()" class="btn btn-default">下一页</button></li>
+</ul>

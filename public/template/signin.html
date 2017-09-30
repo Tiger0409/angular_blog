@@ -1,0 +1,24 @@
+<div>
+	<div class="fadeView">
+	</div>
+	<form action="/users/signin" method="post" class="center-block signinView">
+		<span class="glyphicon glyphicon-remove myclose" ng-click="close()"></span>
+		<div ng-init = 'initData()'>
+			<div class="text-center text-info">
+				<h2>Sign In</h2>
+			</div>
+
+			<div class="signinButton center-block">
+				<input type="text" class="form-control" name="username" placeholder="username" ng-model="username" ng-focus="initInfo()"/>
+				<div ng-class="{'errorAlert':true, 'AlertPosit-sign': true, 'show': show.username !== ''}"><div class="arrow"></div>{{error.username}}</div>
+			</div>
+			<div class="signinButton center-block">
+				<input type="password" class="form-control" name="password" placeholder="password" ng-model="password"  ng-focus='initInfo()'/>
+				<div ng-class="{'errorAlert':true, 'AlertPosit-sign': true, 'show': show.password !== ''}"><div class="arrow"></div>{{error.password}}</div>
+			</div>
+			<div class="signinButton center-block">
+				<button type="button" class="btn btn-success signinBButton" ng-click="checkData()">Sign In</button>
+			</div>
+		</div>
+	</form>
+</div>

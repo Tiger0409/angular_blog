@@ -1,0 +1,507 @@
+* {
+	font-family: "Arial";
+}
+
+
+html,
+body {
+	padding: 0;
+	margin: 0;
+	height: 100%;
+}
+
+.parent {
+	position: relative;
+	width: 100%;
+	min-height: 100%;
+	height: auto !important;
+}
+
+.mainView {
+	padding: 0; 
+	height: 5%; 
+	background-color: white;
+}
+
+.myblogView{ 
+	padding: 0; 
+	height: 100%; 
+	background-color: white;
+}
+
+.footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 20px;
+	background-color: rgb(248, 248, 248);
+	text-align: center;
+	color: #777;
+}
+
+
+.btn:active,
+.btn:focus {
+	outline: none;
+}
+
+.btn-active {
+	background-color: #00a1d6 !important;
+}
+#navbar { 
+	margin-bottom: 0;
+}
+
+
+.myblogView{ 
+	padding: 0; 
+	height: 100%; 
+	background-color: white;
+}
+
+.paging {
+	position: absolute;
+	bottom: 13px;
+}
+
+
+.navView { 
+	width: 100%;
+}
+
+.writepostView, 
+.contentView {
+	position: relative;
+	min-height: 900px;
+}
+
+.wirtepostviewsecondchild {
+	position: relative;
+	margin-top: 5%;
+	height: 70px;
+	width: 100%;
+}
+
+.writepostviewchildView>input {
+	min-height: 30px;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+.fadeView {
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 1;
+	height: 100%;
+	width: 100%;
+	background-color: #595959;
+	opacity: 0.5;
+}
+
+.postView {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	min-height: 100%;
+	z-index: 3;
+	background-color: white;
+}
+.postView>div {
+	background-color: white;
+}
+
+.signinView, 
+.signupView, 
+.infoFrame {
+	border-radius: 10px;
+}
+
+@keyframes myAnimate {
+	from {top: 0%;}
+	to {top: 20%;}
+}
+
+.signinView, 
+.signupView {
+	position: absolute;
+	left: 50%;
+	margin-left: -200px;
+	z-index: 2;
+	animation: myAnimate .8s;
+	box-shadow: 0 0 2px #e7e7e7;
+	background-color: white;
+}
+
+.signinView {
+	top: 20%;
+	width: 400px;
+	height: 270px;
+}
+
+.signupView {
+	top: 20%;
+	width: 400px;
+	height: 500px;
+}
+
+.infoFrame {
+	position: absolute;
+	top: 20%;
+	left: 50%;
+	z-index: 2;
+	width: 400px;
+	height: 270px;
+	line-height: 200px;
+	text-align: center;
+	margin-left: -200px;
+	animation: myAnimate .8s;
+	box-shadow: 0 0 2px #e7e7e7;
+	background-color: white;
+}
+
+.infoStyle {
+	font-size: 18pt;
+}
+
+.signinButton {
+	margin-top: 20px;
+	width: 80%;
+	height: 40px;
+}
+
+.signinBButton {
+	width: 100%;
+}
+
+.myclose {
+	position: absolute;
+	right: 3px;
+	top: 3px;
+	color: #4A4A4A;
+}
+
+.myclose:hover {
+	transform: scale(1.05);
+}
+
+.pointStyle {
+	cursor: pointer;
+}
+
+
+.inputTitle {
+	margin-bottom: 20px;
+	width: 300px;
+}
+
+.buttonPost {
+	position: absolute;
+	top: 40px;
+	right: 10%;
+}
+
+.list-title {
+	color: black;
+}
+.list-foot {
+	color: #999999;
+	font-size: 14px;
+	font-weight: normal;
+	margin-top: 20px;
+}
+
+.list-foot .offset {
+	margin-left: 10px;
+}
+.myListstyle {
+	position: relative;
+	height: 5%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+.myListstyle>h2 {
+	border-left: 3px solid #404040;
+}
+
+.myListstyle a:link,
+.myListstyle a:visited {
+	text-decoration: none;
+}
+
+.list-title,
+.list-foot {
+	margin-left: 12px;
+}
+
+.btn-mystyle {
+	position: absolute;
+	right: 3%;
+	top: 50%;
+	margin-top: -10px;
+}
+
+
+
+
+/*文章详情*/
+.detail {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 20px;
+	min-height: 700px;
+	width: 60%;
+	border-radius: 10px;
+}
+
+
+.detail-title {
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	margin-top: 40px;
+	text-align: center;
+	width: 40%;
+}
+
+.detail-article {
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	font-size: 16px;
+	width: 50%;
+}
+.detail-author {
+	position: relative;
+	margin-right: auto;
+	margin-left: auto;
+	width: 40%;
+	color: #999999;
+	font-size: 15px;
+	text-align: center;
+}
+
+
+.detail-author>span {
+	margin-left: 15px;
+}
+
+.detail-operator {
+	position: absolute;
+	font-size: 15px;
+	color: #999999;
+	right: 10%;
+	top: -15px;
+}
+
+.detail-operator>span {
+	margin-left: 15px;
+}
+
+.detail-comment {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 50px;
+	width: 60%;
+}
+
+.detail-comment>h4,
+.detail-comment>p, 
+.detail-comment #commentWarn {
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.detailButton {
+	margin-left: 6px;
+}
+
+.detailButton>a:link,
+.detailButton>a:visited {
+	color: white;
+	text-decoration: none;
+}
+/*输入评论部分*/
+.detail-comment-input {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	min-height: 60px;
+	width: 95%;
+}
+
+.detail-comment-input>textarea {
+	position: relative;
+	width: 80%;
+	height: 60px;
+	margin-right: 10px;
+	margin-left: 100px;
+	resize: none;
+	display: inline-block;
+}
+.detail-comment-input>button {
+	position: absolute;
+	margin-left: 10px;
+	height: 60px;
+	width: 60px;
+	padding: 0;
+	background-color: #00a1d5;
+	border: 1px solid #00a1d6;
+	border-radius: 2px;
+	color: white;
+	display: inline-block;
+}
+
+.detail-comment-input>img {
+	position: absolute;
+	left: 0;
+	height: 60px;
+	width: 60px;
+}
+/*评论列表*/
+.commentList {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	min-height: 100px;
+	width: 95%;
+	margin-top: 20px;
+}
+
+.commentList p {
+	position: relative;
+	margin-left: 90px;
+	min-height: 60px;
+	width: 80%;
+	font-size: 17px;
+}
+
+.comment-author {
+	position: relative;
+	margin-left: 80px;
+	font-size: 16px;
+	color: #6d757a;
+}
+.comment-content {
+	margin-top: 10px;
+	margin-left: 10px;
+}
+.commentList img {
+	position: absolute;
+	left: 0;
+	width: 60px;
+	height: 60px;
+}
+
+.comment-footer {
+	position: relative;
+	margin-left: 80px;
+	font-size: 11px;
+	color: #999999;
+}
+
+.comment-footer>span {
+	margin-right: 5px;
+}
+
+.comment-footer>a:link,
+.comment-footer>a:visited {
+	color: #999999;
+	text-decoration: none;
+}
+
+.edit-comment-input {
+	position: absolute;
+	left: 80px;
+	height: 60px;
+	width: 90%;
+}
+
+.edit-comment-input>textarea {
+	height: 60px;
+	width: 80%;
+	resize: none;
+}
+.edit-comment-button-group {
+	position: absolute;
+	margin-left: 20px;
+	display: inline-block;
+}
+.edit-comment-button-group>button {
+	margin-top: 2px;
+	margin-bottom: 2px;
+	height: 25px;
+	width: 60px;
+	border: 1px solid #00a1d6;
+	border-radius: 2px;
+	background-color: #00a1d5;
+	color: white;
+	display: block;
+}
+
+/*提示隐藏信息*/
+.hideInfo {
+	font-size: 15px !important;
+	margin-left: 10px;
+	background-color: #e7e7e7;
+}
+
+/*信息提示框*/
+.errorAlert {
+	opacity: 0;
+	height: 20px;
+	background-color: #E9967A;
+	border-radius: 3px;
+	color: white;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+.arrow {
+	position: absolute;
+	bottom: -16px;
+	width: 0px;
+	height: 0px;
+	border-width: 10px 10px 10px 10px;
+	border-left-color: transparent;
+	border-right-color: transparent;
+	border-top-color: #E9967A;
+	border-bottom-color: transparent;
+	border-style: solid;
+}
+
+.AlertPosit-sign {
+	position: absolute;
+	left: 42px;
+	margin-top: -58px;
+}
+
+.AlertPosit-wirte {
+	position: absolute;
+	left: 85%;
+	top: 15px;
+}
+
+.AlertPosit-detail {
+	position: absolute;
+	left: 15%;
+	top: -25px;
+}
+
+.show {
+	opacity: 1 !important;
+	transition: all .5s;
+}
+
+.lastPage {
+	color: #999999;
+}
+
+.o {
+	position: relative;
+	top: 20px;
+}

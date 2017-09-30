@@ -1,0 +1,14 @@
+<div class='contentView container' ng-model='posts'>
+	<span ng-if="!isSearch" class="lastPage o">以下为文章列表</span>
+	<span ng-if="isSearch" class="lastPage o">以下为搜索结果</span>
+	<li ng-repeat="post in posts" class='list-unstyled myListstyle'>
+		<hr>
+		<h2><a href="" class="list-title" ng-click="getTargetpost(post._id)">{{post.title}}</a><span ng-if="post.isHide" class="hideInfo">该文章已被管理员隐藏</span></h2>
+		<div class="list-foot "><span class="glyphicon glyphicon-time"></span>发布时间: {{post.date | date: 'yyyy-MM-dd HH:mm'}} <span class="glyphicon glyphicon-user offset">作者: {{post.author}}</span></div>
+		<button type="button" class="btn btn-default btn-mystyle" ng-click="getTargetpost(post._id)">阅读全文</button>
+	</li>
+	<hr>
+	<img src="./images/info3.png" ng-if="amount === 0 && !isSearch">
+	<img src="./images/info2.png" ng-if="amount === 0 && isSearch">
+	<paging><paging>
+</div>

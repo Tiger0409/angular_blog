@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blog</title>
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/stylesheets/style.css" rel="stylesheet">
+    <link href="/stylesheets/textAngular.css" rel="stylesheet">
+    <script src="http://cdn.bootcss.com/angular.js/1.6.0-rc.2/angular.min.js"></script>
+    <script src="http://cdn.bootcss.com/angular.js/1.6.0-rc.2/angular-route.min.js"></script>
+    <script src="http://cdn.bootcss.com/angular.js/1.6.0-rc.2/angular-cookies.js"></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/textAngular/1.5.0/textAngular-rangy.min.js'></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/textAngular/1.5.0/textAngular-sanitize.min.js'></script>
+    <script src='http://cdnjs.cloudflare.com/ajax/libs/textAngular/1.5.0/textAngular.min.js'></script>
+  </head>
+  <body ng-app="Blog">
+  <div ng-controller="parentCtrl" class="parent">
+    <div class='mainView' ng-controller='homepageCtrl'>
+      <nav class="navbar navbar-default navView" id="navbar">
+          <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-menu" aria-expanded="false">
+                  <span class="sr-only">Toggle navigation</span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+                  <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand">Welcome</a>
+          </div>
+          <div id="navbar-menu" class="collapse navbar-collapse">
+            <ul class="nav navbar-nav col-md-2" >
+              <li><a href='#!/'><span class="glyphicon glyphicon-home"></span></a></li>
+              <li class="pointStyle"><a ng-href='#!/{{website}}' ng-click="checkIfsignin()">My Blog</a></li>
+            </ul>
+          <div class="col-md-4">
+            <form ng-controller="searchCtrl" class="navbar-form navbar-right" role="search">
+              <div class="form-group">
+                <input type="text" ng-model="keyWord" class="form-control" placeholder="Search" value="{{keyWord}}">
+              </div>
+              <button type="submit" ng-click="search()" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+            </form>
+          </div>
+            <ul class="nav navbar-nav col-md-3 navbar-right">
+              <li><a ng-href="#!/{{_website}}" class="pointStyle" ng-click="_checkIfsignin()">Write Blog</a></li>
+              <li><a ng-if="canShow()" class="col-sm-offset-4"><span class="glyphicon glyphicon-user"></span></a></li>
+              <li><a href="" ng-if="canShow()" ng-click='logOut()' class="col-sm-offset-5"><span class="glyphicon glyphicon-log-out"></span></a></li>
+              <li><a href="#!/signin" ng-if="!canShow()">Sign in</a></li>
+              <li><a href="#!/signup" ng-if="!canShow()">Sign up</a></li>
+            </ul>
+          </div>
+      </nav>
+    </div>
+  <div ng-view></div>
+  <div class="footer">made by Lifeng Zhu</div>
+  </div>
+  <script src="/javascripts/app.js"></script>
+  <script src="/javascripts/service.js"></script>
+  <script src="/javascripts/controllers.js"></script>
+  <script src="/javascripts/directive.js"></script>
+  <script src="/javascripts/encryption.js"></script>
+  <script src="http://cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
+  <script src="http://cdn.bootcss.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+  </body>
+</html>
