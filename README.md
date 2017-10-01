@@ -10,7 +10,7 @@ admin can permit display blog.
    Create Falder C:/db.
    and write fallow command in CMD or terminal.
   C:\Program Files\MongoDB\Server\3.4\bin>mongod --dbpath c:\db
-## 3).install node-moduls node_modules
+## 3).install node_modules
     npm install 
     npm install express
     npm install path
