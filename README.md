@@ -1,7 +1,5 @@
 # angular_blog
-This is Mean blog.
+This is Mean Stack Blog.
+You can insert blog and show this.
+admin can permit display blog.
 
-install node.
-npm install node.
-npm start
-localhost 3000
